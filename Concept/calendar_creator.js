@@ -58,8 +58,47 @@ function setDay(value, index, m, day_num, year_data, current_year) {
     
     // set values
 
-    
-    
+    (year_data[String(current_year) + "-" + String(day_num)])["work_hours_bussy"] = 0;
+    (year_data[String(current_year) + "-" + String(day_num)])["work_hours_free"] = 0;
+    (year_data[String(current_year) + "-" + String(day_num)])["mid_hours_bussy"] = 0;
+    (year_data[String(current_year) + "-" + String(day_num)])["mid_hours_free"] = 0;
+    (year_data[String(current_year) + "-" + String(day_num)])["rest_hours_bussy"] = 0;
+    (year_data[String(current_year) + "-" + String(day_num)])["rest_hours_free"] = 0;
+    (year_data[String(current_year) + "-" + String(day_num)])["total_hours"] = 0;
+
+    // set tasks
+
+    (year_data[String(current_year) + "-" + String(day_num)])["tasks_list"] = [];
+
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_1"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_2"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_3"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_4"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_5"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_6"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_7"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_8"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_9"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_10"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_11"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_12"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_13"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_14"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_15"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_16"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_17"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_18"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_19"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_20"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_21"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_22"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_23"] = "";
+    (year_data[String(current_year) + "-" + String(day_num)])["hour_24"] = "";
+
+    // points
+    (year_data[String(current_year) + "-" + String(day_num)])["points"] = 0; //(task_time x task_excertion)
+
+
 }
 
 
@@ -104,3 +143,4 @@ for (m = 0; m < 12 ; m++ ) {
 }
 
 console.log(year_data)
+
