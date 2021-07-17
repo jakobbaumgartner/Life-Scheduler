@@ -1,0 +1,50 @@
+-> task list data type:
+	
+	line (track)	: string 
+	recurrence: finite / infinite (number of weeks, times per week)
+	name: string
+	priority: int 1-5
+	fixed: bool
+	deadline: date
+	prefered enddate: date
+	buffer days: int
+	safety_margin (percents): int 1-100
+	excertion: int 1-5
+	order: list of tasks / strings before it
+	scheduler shape: string (ramp up, constant ... )
+	task_time: int hours
+	
+	
+	-> subtype task type:
+		name: string
+		deadline: date
+		out_of_order_schedulling: bool 
+		excertion: int 1-5
+		order: list of tasks / strings before it
+		task_time: int hours
+		
+	
+	
+-> task lists creator
+
+-> calendar (ical) data type
+	date (days since starting date): int
+	day_type (weekday, weekend, holiday): string
+	day_name (monday tuesday ...): string
+	vacation (yes, no, working): string
+	hours: int
+	points (task_time x task_excertion): int
+	tasks_list: []
+	time:
+	[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24]
+	work_hours_bussy: int
+	work_hours_free: int
+	mid_hours_bussy: int
+	mid_hours_free: int
+	rest_hours_bussy: int
+	rest_hours_free: int
+	
+	
+
+	
+-> scheduller concept
