@@ -120,12 +120,11 @@ else {
     num_of_days = 365
 }
 
-// create json data
+// create year data object
 
-console.log(year_data)
+cal = new c.Calendar(1); // get calendar object with weeks starting monday
 
-cal = new c.Calendar(1);
-
+// iterate over months
 for (m = 0; m < 12 ; m++ ) {
     month = cal.monthDays(current_year, m); 
    

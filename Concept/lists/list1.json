@@ -3,11 +3,12 @@
     "recurrence": "finite",
     "priority": 4,
     "fixed": false,
+    "startdate": 45,
     "deadline": 50,
     "buffer_days": 5,
-    "safety_margin": 20,
     "exertion": 4,
     "scheduler_shape": "constant",
+    "prefered_time": "soon",
     "task_time": 4,
     "tasks": [
         {"name": "task1"},

@@ -1,0 +1,37 @@
+merge-------------
+first merge all lists together based on order of execution, priority
+1. get a list of all aveliable lists
+2. from each list import tasks, add important info
+
+schedule tasks:
+-----------------
+1. look start date, end date 
+2. calculate:
+	-> number of hours needed for tasks
+	-> number of work, mid, rest hours in this time
+	-> if constant:
+		-> if once:
+				-> if before
+					-> spread starting from the end
+				-> if soon
+					-> spread starting from beginning
+					
+					
+	-> if ramp-up / down (spread)
+		-> divide time into 5 intervals
+		-> try to fill tasks percentually into intervals, if no time 
+			move to another interval
+	
+
+
+input list:
+-------------------
+1. num of activities
+2. hours of activities
+3. distribution
+
+
+input calendar:
+-------------------
+1. aveliable time (work / mid / rest)
+2. aveliable days
