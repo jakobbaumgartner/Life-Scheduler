@@ -4,67 +4,42 @@
 
 const fs = require('fs');
 
-class taskScheduler{
+class TaskScheduler{
 
-    priorityList = {
-        "priority_1": [],
-        "priority_2": [],
-        "priority_3": [],
-        "priority_4": [],
-        "priority_5": []
-    }
+    task_lists_values = [] // object with all lists of tasks
+    task_lists_names = [] // list of names of lists :) 
 
-    createTasksList() {
+    readTasksLists() {
+
+        /**
+         *  this function reads all the tasks from folder "lists" and converts them to object of lists and list of names
+         */
         
-        // see all lists
-        var list = fs.readdirSync('./lists')
+        // see all lists files
+        this.task_lists_names = fs.readdirSync('./lists')
+        console.log(this.task_lists_names)
 
-        list.forEach(element => {
+        this.task_lists_names.forEach(element => {
             let rawdata = fs.readFileSync('./lists/'+String(element));
             let element_list = JSON.parse(rawdata);
-      
-            
-            this.priorityList["priority_" + String(element_list["priority"])].push(element_list)
+         
+            this.task_lists_values.push(element_list)
             
             })
     
-        // console.log(this.priorityList)
 
-        // for(const element in this.priorityList) {
-        //     console.log(this.priorityList[element])
-        // }
-
-        return this.priorityList
+        return this.task_lists_values
     }
 
-    spreadTasks() {
-        /**
-         *  place tasks on calendar
-         */
 
-        for(const priority_group in this.priorityList) {
-            console.log("\n" + priority_group)
-            console.log("-------<<->>----------")
-            
-            if(this.priorityList[priority_group].length > 0) {
 
-            this.priorityList[priority_group].forEach( list => {
-                console.log(list)
-            })
-
-            }
-            else{
-                console.log("-> empty")
-            }
-        
-    }
-}
+   
 }
 
 sch = new taskScheduler()
 
-sch.createTasksList()
+sch.readTasksLists()
 
-sch.spreadTasks()
 
-// console.log(sch.priorityList)
+
+console.log(sch.task_lists_values)
