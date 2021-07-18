@@ -15,6 +15,9 @@ schedule tasks:
 					-> spread starting from the end
 				-> if soon
 					-> spread starting from beginning
+				-> if spread
+		-> if times a week / month
+			...
 					
 					
 	-> if ramp-up / down (spread)
